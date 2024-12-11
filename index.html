@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drinking Water Analysis Report</title>
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #f0f0f0;
+            background: linear-gradient(to right, #141e30, #243b55);
+        }
+        header {
+            background-color: #1f4068;
+            color: #f0f0f0;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        nav {
+            background: #162447;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        
+        nav button {
+            background: #1b1b2f;
+            border: none;
+            padding: 0.5rem 1rem;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        nav button:hover {
+            background: #e43f5a;
+        }
+        section {
+            padding: 2rem;
+            margin: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: rgba(255, 255, 255, 0.1);
+            color: #f0f0f0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        th, td {
+            border: 1px solid #444;
+            padding: 1rem;
+            text-align: center;
+        }
+        th {
+            background-color: #1f4068;
+            color: white;
+        }
+        .remarks, .recommendations, .chart {
+            margin-top: 2rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        h2 {
+            color: #eaeaea;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Drinking Water Analysis Report</h1>
+        <h2>Prof. Ram Meghe Institute of Technology and Research</h2>
+    </header>
+    <nav>
+        <button onclick="scrollToSection('quantitative')">Quantitative Analysis</button>
+        <button onclick="scrollToSection('qualitative')">Qualitative Analysis</button>
+        <button onclick="scrollToSection('satisfaction')">Students Satisfaction</button>
+        <button onclick="scrollToSection('remarks')">Remarks</button>
+        <button onclick="scrollToSection('recommendations')">Recommendations</button>
+    </nav>
+    <section id="quantitative">
+        <h2>Quantitative Analysis</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Department</th>
+                    <th>Water Tanks</th>
+                    <th>Storage Capacity</th>
+                    <th>Cleaning Schedule</th>
+                    <th>Water Outlets</th>
+                    <th>Water Coolers</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>CSE</td>
+                    <td>5</td>
+                    <td>4 × 2000L, 1 × 1000L(plastic)</td>
+                    <td>Every Sunday</td>
+                    <td>4</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>IT</td>
+                    <td>5</td>
+                    <td>4 × 2000L, 1 × 1000L(plastic)</td>
+                    <td>Every Sunday</td>
+                    <td>4</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Mechanical</td>
+                    <td>1</td>
+                    <td>1 × 10,000L</td>
+                    <td>Every Sunday</td>
+                    <td>4</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>EXTC</td>
+                    <td>2</td>
+                    <td>1 × 1000L (Plastic), 1 × 1000L (Concrete)</td>
+                    <td>Every Sunday</td>
+                    <td>4</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>AIDS & IOT</td>
+                    <td>1</td>
+                    <td>1 × 10000L (Concrete)</td>
+                    <td>Every Sunday</td>
+                    <td>4/4</td>
+                    <td>2/2</td>
+                </tr>
+                <tr>
+                    <td>CIVIL</td>
+                    <td>1</td>
+                    <td>1 × 10000L (Concrete)</td>
+                    <td>Every Sunday</td>
+                    <td>4</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Canteen</td>
+                    <td>2</td>
+                    <td>1 × 1000L, 1 × 5000L (plastic)</td>
+                    <td>Every Sunday</td>
+                    <td>2</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Workshop</td>
+                    <td>1 (Non-functional)</td>
+                    <td>1 × 1000L</td>
+                    <td>Every Sunday</td>
+                    <td>2</td>
+                    <td>1 (Non-functional)</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section id="qualitative">
+        <h2>Qualitative Analysis</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Department</th>
+                    <th>pH</th>
+                    <th>TDS (mg/L)</th>
+                    <th>DO (mg/L)</th>
+                    <th>Turbidity (NTU)</th>
+                    <th>Chlorides (mg/L)</th>
+                    <th>Hardness (mg/L)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>CSE</td>
+                    <td>7.30</td>
+                    <td>667</td>
+                    <td>3.7</td>
+                    <td>0.01</td>
+                    <td>16.48</td>
+                    <td>95</td>
+                </tr>
+                <tr>
+                    <td>IT</td>
+                    <td>7.32</td>
+                    <td>712</td>
+                    <td>3.7</td>
+                    <td>0.01</td>
+                    <td>16.47</td>
+                    <td>Above limit</td>
+                </tr>
+                <tr>
+                    <td>Mechanical</td>
+                    <td>7.51</td>
+                    <td>786</td>
+                    <td>3.5</td>
+                    <td>0</td>
+                    <td>13.18</td>
+                    <td>Above limit</td>
+                </tr>
+                <tr>
+                    <td>EXTC</td>
+                    <td>7.66</td>
+                    <td>690</td>
+                    <td>3.6</td>
+                    <td>0</td>
+                    <td>16.49</td>
+                    <td>Above limit</td>
+                </tr>
+                <tr>
+                    <td>AIDS</td>
+                    <td>7.70</td>
+                    <td>165</td>
+                    <td>3.9</td>
+                    <td>0</td>
+                    <td>13.19</td>
+                    <td>96</td>
+                </tr>
+                <tr>
+                    <td>IOT</td>
+                    <td>7.70</td>
+                    <td>165</td>
+                    <td>3.9</td>
+                    <td>0</td>
+                    <td>13.19</td>
+                    <td>95</td>
+                </tr>
+                <tr>
+                    <td>Civil</td>
+                    <td>7.54</td>
+                    <td>425</td>
+                    <td>3.6</td>
+                    <td>0</td>
+                    <td>13.20</td>
+                    <td>98</td>
+                </tr> <tr>
+                    <td>Canteen</td>
+                    <td>7.56</td>
+                    <td>505</td>
+                    <td>3.8</td>
+                    <td>0</td>
+                    <td>16.51</td>
+                    <td>96</td>
+                </tr>
+
+                <tr>
+                    <td>Workshop</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section id="satisfaction">
+        <h2>Students Satisfaction Survey</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Percentage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Students using drinking water from coolers</td>
+                    <td>91.6%</td>
+                </tr>
+                <tr>
+                    <td>Water appearance (clear)</td>
+                    <td>48.1%</td>
+                </tr>
+                <tr>
+                    <td>Water appearance (slightly cloudy)</td>
+                    <td>37.2%</td>
+                </tr>
+                <tr>
+                    <td>Water appearance (very cloudy)</td>
+                    <td>13.8%</td>
+                </tr>
+                <tr>
+                    <td>Easy accessibility of water</td>
+                    <td>34.7%</td>
+                </tr>
+                <tr>
+                    <td>Very Satisfied with Quality and Quantity</td>
+                    <td>12.9%</td>
+                </tr>
+                <tr>
+                    <td>Satisfied  with Quality and Quantity</td>
+                    <td>26.5%</td>
+                </tr>
+                <tr>
+                    <td>Neutral  with Quality and Quantity</td>
+                    <td>31.9%</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="chart">
+            <h3>Student Feedback Highlights</h3>
+            <p>Many students reported issues with cleanliness around water coolers and dissatisfaction with water quality, indicating areas for improvement in infrastructure and maintenance.</p>
+        </div>
+    </section>
+    <section id="remarks" class="remarks">
+        <h2>Remarks</h2>
+        <ul>
+            <li>TDS levels exceed recommended limits in all tested departments, indicating poor water quality.</li>
+            <li>pH levels are within acceptable ranges, indicating the water is safe for drinking.</li>
+            <li>The non-functional cooler in the Workshop department hampers accessibility.</li>
+            <li>Turbidity levels indicate clear water with no suspended particles.</li>
+        </ul>
+    </section>
+    <section id="recommendations" class="recommendations">
+        <h2>Recommendations</h2>
+        <ol>
+            <li>Install water purification systems to reduce TDS levels and improve water quality.</li>
+            <li>Repair and maintain non-functional coolers, especially in the Workshop department.</li>
+            <li>Ensure regular cleaning of water tanks and coolers to maintain hygiene.</li>
+            <li>Conduct routine monitoring of water quality to address potential issues promptly.</li>
+        </ol>
+    </section>
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
